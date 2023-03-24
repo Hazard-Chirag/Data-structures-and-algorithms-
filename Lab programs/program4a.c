@@ -1,3 +1,8 @@
+/*Design, Develop and Implement a Program in C for the following Stack applications
+ a. Evaluation of Suffix expression with single digit operands and operators:
+ +, -, *, /, %, ^ */
+
+
 #include<stdio.h>
 #include<ctype.h>
 #include<math.h>
