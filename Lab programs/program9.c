@@ -1,3 +1,10 @@
+/*Design, Develop and implement a program in C for the following operations on Graph (G) of
+cities
+ a. Create a Graph of N cities using Adjacency Matrix.
+ b. Print all the nodes reachable from a given starting node in a diagraph using DFS/BFS
+ method.
+ */
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -35,6 +42,29 @@ void dfs(int u,int n)
     }
 }
 
+void bfs(int u,int n)
+{
+    int rear=-1,front=0,v;
+    int q[10];//queue
+    printf("\nCities reachable from %d: ",u);
+    q[++rear]=u;//insert
+    F[u]=1;
+    printf("%d\t",u);
+    while(front<=rear)//until queue empty
+    {
+        u=q[front++];//delete front
+        for(v=0;v<n;v++)
+        {
+            if(a[u][v]==1 && F[v]==0)
+            {
+                printf("%d\t",v);
+                F[v]=1;//set flag
+                q[++rear]=v;//insert in queue
+            }
+        }
+    }
+}
+
 void dfs_recursive(int u,int n)
 {
     int v;
@@ -55,9 +85,8 @@ int main()
     for(source=0;source<n;source++)
     {
         for(i=0;i<n;i++)
-            F[i]=0; //setting all flags to 0 initially(cuz not traversed)
-            printf("Nodes accessible from %d",source);
-        dfs_recursive(source,n);
+            F[i]=0; //setting all flags to 0 initially(cuz not traversed)     
+        dfs(source,n);
     }
     return 0;
 
