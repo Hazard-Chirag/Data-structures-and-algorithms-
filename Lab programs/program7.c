@@ -1,3 +1,16 @@
+/*Given an array of elements, construct a complete binary tree from this array in level order
+5
+fashion. That is, elements from left in the array will be filled in the tree level wise starting
+from level 0. Ex: Input : arr[] = {1, 2, 3, 4, 5, 6}
+ Output : Root of the following tree
+             1
+            / \
+          2     3
+         / \   /  \
+        4   5  6
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
