@@ -1,3 +1,6 @@
+/*b. Solving Tower of Hanoi problem with n disks.
+*/
+
 #include<stdio.h>
 void towerofhanoi(int n,char s,char t,char d)
 {
