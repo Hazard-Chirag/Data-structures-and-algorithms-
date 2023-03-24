@@ -44,9 +44,13 @@ void inOrder(NODE root) {
 }
 
 int main () {
-
-  int arr[] = {1, 2, 3, 4, 5};
-
+  int n;
+  printf("Enter number of elements of array\n");
+  scanf("%d",&n);
+  int arr[n];
+  printf("Enter the elements of the array\n");
+  for(int i=0;i<n;i++)
+      scanf("%d",&arr[i]);
   int size = sizeof(arr) / sizeof(arr[0]);
   int startingIndex = 0;
   NODE root = create(arr, startingIndex, size);
