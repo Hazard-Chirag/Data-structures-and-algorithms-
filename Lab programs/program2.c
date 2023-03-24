@@ -1,3 +1,9 @@
+/*Design, Develop and Implement a menu driven Program in C for the following Array
+ Operations
+ a. Inserting an Element (ELEM) at a given valid Position (POS)
+ b. Deleting an Element at a given valid Position POS)
+ c. Display of Array Elements */
+
 #include<stdio.h>
 #include<stdlib.h>
 
